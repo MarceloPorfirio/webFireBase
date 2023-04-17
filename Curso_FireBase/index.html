@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="shortcut icon" href="img/todoListFavicon.png" type="image/x-icon" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="app">
+    <!-- logotipo todoList -->
+    <div class="center">
+        <img src="img/todoList.png" alt="">
+    </div>
+
+    <!--Conteudo para usuários nao autenticados-->
+    <div id="auth" class="center">
+    <!--formulário de autenticação-->
+        <form id="authForm">
+            <h3 id="authFormTitle">Acesse sua conta para continuar</h3>
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="E-mail" id="email">
+
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Senha" id="password">
+
+            <button type="submit" id="submitAuthForm">Acessar</button>
+        </form>
+        <!--Criar uma conta para novos usuários-->
+        <p id="register">
+            Não possui uma conta?
+            <button onclick="toggleToRegister()" class="alternative">Cadastrar uma nova conta</button>
+        </p>
+
+        <p id="access" class="startHidden">
+            Já possui uma conta?
+            <button onclick="toggleToAccess()" class="alternative">Acesse sua conta conta</button>
+        </p>
+    </div>
+   </div>
+
+<!--Funções javascript-->
+<script src="js/utils.js"></script>
+</body>
+</html>
