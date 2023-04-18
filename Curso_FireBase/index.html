@@ -7,12 +7,20 @@
     <title>To do List</title>
     <link rel="shortcut icon" href="img/todoListFavicon.png" type="image/x-icon" >
     <link rel="stylesheet" href="css/style.css">
+
+    
+
 </head>
 <body>
    <div id="app">
     <!-- logotipo todoList -->
     <div class="center">
         <img src="img/todoList.png" alt="">
+    </div>
+
+    <!--Feedback de carregamento(loading)-->
+    <div id="loading">
+        <img src="img/loading.gif" alt="animação de carregamento">
     </div>
 
     <!--Conteudo para usuários nao autenticados-->
@@ -41,7 +49,14 @@
     </div>
    </div>
 
+<!--Recursos FireBase-->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
 <!--Funções javascript-->
+<script src="js/firebase.js"></script>
 <script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+
+
 </body>
 </html>
