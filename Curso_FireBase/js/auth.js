@@ -33,3 +33,17 @@ function signOut(){
   console.log('error')
 })
 }
+
+//função para permitir a verificação do email de usuário
+function sendEmailVerification(){
+  showItem(loading)
+  var user = firebase.auth().currentUser
+  user.sendEmailVerification().then(function(){
+    alert('Email de verificação foi enviado para ' +  user.email + ' ! Verifique sua caixa de entrada')
+  }).catch(function(error){
+    alert('Houve um erro ao enviar o e-mail de verificação')
+    console.log(error)
+  }).finally(function(){
+  hideItem(loading)
+})
+}
