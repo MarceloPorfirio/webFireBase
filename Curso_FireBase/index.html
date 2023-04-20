@@ -15,7 +15,7 @@
    <div id="app">
     <!-- logotipo todoList -->
     <div class="center">
-        <img src="img/todoList.png" alt="">
+        <img src="img/logo_icoders.jpg" alt="">
     </div>
 
     <!--Feedback de carregamento(loading)-->
@@ -47,6 +47,19 @@
             <button onclick="toggleToAccess()" class="alternative">Acesse sua conta conta</button>
         </p>
     </div>
+    <!-- Criando direcionamento para o usuário autenticado -->
+    <div id="userContent" class="startHidden">
+        <div id="userInfo" class="center">
+            <p id="userEmail"></p>
+            <p id="emailVerified"></p>
+            <div id="sendEmailVerificationDiv">
+                <button class="alternative" onclick="sendEmailVerification()">Verificar E-mail</button>
+            </div>
+            <button class="alternative" onclick="signOut()">Sair</button>
+
+        </div>
+    </div>
+
    </div>
 
 <!--Recursos FireBase-->

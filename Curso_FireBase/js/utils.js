@@ -1,4 +1,4 @@
-//definindo referencias para elementos da pagina
+//definindo referencias para elementos da pagina (manipulação de arquivos)
 
 var authForm = document.getElementById('authForm')
 var authFormTitle = document.getElementById('authFormTitle')
@@ -7,6 +7,13 @@ var register = document.getElementById('register')
 var access = document.getElementById('access')
 
 var loading = document.getElementById('loading')
+
+var auth = document.getElementById('auth')
+var userContent = document.getElementById('userContent')
+
+var userEmail = document.getElementById('userEmail')
+
+
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister(){
@@ -30,3 +37,20 @@ function showItem(element){
 function hideItem(element){
     element.style.display = 'none'
 }
+
+//função destinada para mostrar conteudo para usuários autenticados
+function showUserContent(user){
+    console.log(user)
+    userEmail.innerHTML = user.email
+    hideItem(auth)
+    showItem(userContent)
+}
+
+//função destinada para usuários não autenticados, já limpando os campos de email e senha
+function showAuth(){ 
+    authForm.email.value = ''
+    authForm.password.value = ''
+    hideItem(userContent)
+    showItem(auth)
+}
+
