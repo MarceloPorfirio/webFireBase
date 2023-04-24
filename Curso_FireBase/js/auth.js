@@ -6,11 +6,13 @@ authForm.onsubmit = function (event) {
       firebase.auth().signInWithEmailAndPassword(authForm.email.value, authForm.password.value).catch(function (error) {
         console.log('Falha no acesso')
         console.log(error)
+        hideItem(loading)
       })
     } else {
       firebase.auth().createUserWithEmailAndPassword(authForm.email.value, authForm.password.value).catch(function (error) {
         console.log('Falha no cadastro')
         console.log(error)
+        hideItem(loading)
       })
   
     }
