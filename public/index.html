@@ -58,6 +58,17 @@
             <button class="alternative" onclick="signOut()">Sair</button>
 
         </div>
+        <hr>
+        <div class="center">
+            <form id="todoForm">
+                <h3 id="todoFormTitle">Adicionar Tarefa</h3>
+                <label for="name">Tarefa</label>
+                <input type="text" id="name" placeholder="Tarefa">
+                <button type="submit" id="submitTodoForm">Adicionar Tarefa</button>
+
+            </form>
+
+        </div>
     </div>
 
    </div>
@@ -65,10 +76,15 @@
 <!--Recursos FireBase-->
 <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+
+
 <!--Funções javascript-->
 <script src="js/firebase.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/auth.js"></script>
+<script src="js/todo.js"></script>
 
 
 </body>

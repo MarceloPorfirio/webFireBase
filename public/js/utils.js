@@ -16,6 +16,8 @@ var userEmail = document.getElementById('userEmail')
 var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
 var emailVerified = document.getElementById('emailVerified')
 
+var todoForm = document.getElementById('todoForm')
+
 
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
@@ -69,3 +71,5 @@ var actionCodeSetting = {
     url: 'https://todolist-53b12.firebaseapp.com'
 }
 
+var database = firebase.database()
+var dbRefUsers = database.ref('users')
